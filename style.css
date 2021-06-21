@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+}
+body{
+    background-color: #45caff;
+}
+/* Desktop and larger devices*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    height: 100px;
+}
+.logo{
+    position: relative;
+    left: 15px;
+}
+.logo a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    position: relative;
+    top: 30px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.lines{
+    display: none;
+}
+.nav-links{
+    background-color: #ff1b6b;
+    width: 70vw;
+    display: flex;
+    flex-direction: space-between;
+    justify-content: center;
+    align-items: center;
+}
+.nav-links li{
+    font-size: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    list-style-type: none;
+}
+.logo{
+    position: relative;
+    left: 25px;
+}
+.logo a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    position: relative;
+    top: 30px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.nav-links li a{
+    text-decoration: none;
+    padding: 2px;
+}
+/*Responsiveness on tablets*/
+@media screen and (min-width: 575.97px) and (max-width: 767.98px){
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        background-color: #ff1b6b;
+        height: 100px;
+    }
+    .logo{
+        position: relative;
+        left: 15px;
+    }
+    
+    .lines{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        right: 10px;
+        cursor: pointer;
+    }
+    .line1, .line2, .line3{
+        width: 40px;
+        height: 4px;
+        background-color: white;
+        margin: 3px;
+        position: inherit;
+        top: 30px;
+        transition: all 0.3s ease;
+    }
+    .nav-links{
+        position: absolute;
+        top: 100px;
+        background-color: #ff1b6b;
+        width: 759px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-500px);
+        transition: transform 1s ease-out;
+        z-index: -2;
+    }
+    .nav-links li{
+        font-size: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        list-style-type: none;
+    }
+    .nav-links li a{
+        text-decoration: none;
+        margin-left: 20px;
+        padding: 2px;
+    }
+    .nav-links-visible{
+        transform: translateY(0px);
+    }
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+
+/*responsiveness on mobile phones*/
+@media screen and (max-width: 575.98px){
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        background-color: #ff1b6b;
+        height: 100px;
+    }
+    .logo{
+        position: relative;
+        left: 15px;
+    }
+    .logo a{
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        position: relative;
+        top: 30px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    .lines{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        right: 10px;
+        cursor: pointer;
+    }
+    .line1, .line2, .line3{
+        width: 40px;
+        height: 4px;
+        background-color: white;
+        margin: 3px;
+        position: inherit;
+        top: 30px;
+        transition: all 0.3s ease;
+    }
+    .nav-links{
+        position: absolute;
+        top: 100px;
+        background-color: #ff1b6b;
+        width: 100vw;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-500px);
+        transition: transform 1s ease-out;
+        z-index: -2;
+    }
+    .nav-links li{
+        font-size: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        list-style-type: none;
+    }
+    .nav-links li a{
+        text-decoration: none;
+        margin-left: 20px;
+        padding: 2px;
+    }
+    .nav-links-visible{
+        transform: translateY(0px);
+    }
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
